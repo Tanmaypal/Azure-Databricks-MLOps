@@ -125,9 +125,9 @@ databricks configure --token
 enter host (with worksapce id start with ?O)
 enter token of model dev workspace
 databricks secrets create-scope --scope modelregistery
-databricks secrets put --scope modelregistery --key modelregistery-token --string-value dapi5d4a1a907559461e73117957709bfbb6-2
-databricks secrets put --scope modelregistery --key modelregistery-workspace-id --string-value 8074051404611178
-databricks secrets put --scope modelregistery --key modelregistery-host --string-value https://adb-8074051404611178.18.azuredatabricks.net/
+databricks secrets put --scope modelregistery --key modelregistery-token --string-value dapi770294349ae7ee3eb11508ad8d236565
+databricks secrets put --scope modelregistery --key modelregistery-workspace-id --string-value 7020380126772420
+databricks secrets put --scope modelregistery --key modelregistery-host --string-value https://adb-7020380126772420.0.azuredatabricks.net/
 
 # COMMAND ----------
 
