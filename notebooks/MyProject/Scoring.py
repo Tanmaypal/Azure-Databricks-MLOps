@@ -14,7 +14,7 @@ run_id='ab54d8f19db24c02bfd0965e1525af5a'
 artifact_path = "model"
 model_uri = "runs:/{run_id}/{artifact_path}".format(run_id=run_id, artifact_path=artifact_path)
 model_stage=dbutils.widgets.get("Model Stage")
-print("lllllll",model_stage)
+
 model_production_uri = "models:/{model_name}/{model_stage}".format(model_name=model_name,model_stage=dbutils.widgets.get("Model Stage"))
 
 
@@ -48,13 +48,6 @@ def forecast_power(model_name, model_stage):
   power_predictions.index = pd.to_datetime(weather_data.index)
   print(power_predictions)
   plot(model_name, model_stage, int(model_version), power_predictions, past_power_output)
-
-# COMMAND ----------
-
-from mlflow.tracking.client import MlflowClient
-client = MlflowClient()
-model_version = client.get_latest_versions(model_name, stages=[model_stage])
-print(model_version)
 
 # COMMAND ----------
 
