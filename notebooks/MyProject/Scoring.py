@@ -7,7 +7,7 @@ import mlflow
 
 registry_uri = f'databricks://modelregistery:modelregistery'
 mlflow.set_registry_uri(registry_uri)
-
+print("l")
 model_name = "power-forecasting-model"
 run_id='ab54d8f19db24c02bfd0965e1525af5a'
 # The default path where the MLflow autologging function stores the model
