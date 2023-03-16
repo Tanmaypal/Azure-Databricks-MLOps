@@ -132,9 +132,9 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     env:
-      resourceGroupName: 'Databricks-MyProject-MG-Dev'
-      databricksWorkspaceName: 'Databricks-MyProject-MG-Dev'
-      keyVaultName: 'KeyVault-MyProject7-Dev'
+      resourceGroupName: 'Databricks-MyProjectt'
+      databricksWorkspaceName: 'Databricks-MyProjectt'
+      keyVaultName: 'KeyVault-MyProjectt'
       NotebookDeploymentPath: '/MyProject'
       GitNotebookPath: 'notebooks/MyProject'
 
