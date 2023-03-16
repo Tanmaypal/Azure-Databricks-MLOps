@@ -132,9 +132,9 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     env:
-      resourceGroupName: 'Databricks-MyProjectt'
-      databricksWorkspaceName: 'Databricks-MyProjectt'
-      keyVaultName: 'KeyVault-MyProjectt'
+      resourceGroupName: 'Databricks-MyProjectt-Dev'
+      databricksWorkspaceName: 'Databricks-MyProjectt-Dev'
+      keyVaultName: 'KeyVault-MyProjectt-Dev'
       NotebookDeploymentPath: '/MyProject'
       GitNotebookPath: 'notebooks/MyProject'
 
@@ -220,7 +220,7 @@ jobs:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       #if: ${{ github.event.inputs.MODE == 'Databricks' }}
       with:
-        keyvault: 'KeyVault-MyProjectt'
+        keyvault: 'KeyVault-MyProjectt-Dev'
         secrets: 'databricks-dev-ops-subscription-id,databricks-dev-ops-tenant-id,databricks-dev-ops-client-id,databricks-dev-ops-client-secret'
       id: databricksSecretAction
 
