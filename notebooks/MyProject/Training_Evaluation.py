@@ -171,6 +171,10 @@ model_name = "power-forecasting-model" # Replace this with the name of your regi
 
 # COMMAND ----------
 
+print(model_name)
+
+# COMMAND ----------
+
 # MAGIC %md ### Create a new registered model using the API
 # MAGIC 
 # MAGIC The following cells use the `mlflow.register_model()` function to create a new registered model whose name begins with the string `power-forecasting-model`. This also creates a new model version (for example, `Version 1` of `power-forecasting-model`).
